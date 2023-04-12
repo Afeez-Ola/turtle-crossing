@@ -10,7 +10,9 @@ screen.tracer(0)
 
 player = Player()
 
-screen.onkey(player.go_up, "Up")
+screen.onkey(player.up, "Up")
+
+screen.listen()
 
 game_is_on = True
 while game_is_on:
