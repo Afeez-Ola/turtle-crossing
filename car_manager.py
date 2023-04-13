@@ -13,13 +13,15 @@ class CarManager(Turtle):
         self.penup()
         self.hideturtle()
         self.shape("square")
-        self.setheading(90)
+        self.setheading(180)
         self.goto(270, 0)
 
         self.color(random.choice(COLORS))
-        self.shapesize(stretch_wid=2, stretch_len=1, outline=1)
+        self.shapesize(stretch_wid=1, stretch_len=2, outline=1)
 
-        self.create_new_car()
+        RANDOM_POSITION = random.randint(0, 280)
+        self.setposition(270, RANDOM_POSITION)
+        self.showturtle()
 
     def create_new_car(self):
         RANDOM_POSITION = random.randint(0, 280)
