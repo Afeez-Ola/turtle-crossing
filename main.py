@@ -13,12 +13,16 @@ screen.tracer(0)
 screen.onkey(player.up, "Up")
 screen.listen()
 
-
+# car_manager.create_new_car()
+# car_manager.create_new_car()
 
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
-    car_manager.car_move()
+    for i in range(10):
+        car_manager.create_new_car()
+        car_manager.car_move()
+
 
 screen.exitonclick()
