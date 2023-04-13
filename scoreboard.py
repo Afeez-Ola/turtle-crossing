@@ -10,7 +10,12 @@ class Scoreboard(Turtle):
         self.penup()
         self.color("black")
         self.goto(-100, 180)
-        self.write(self.score, align="center", font=FONT)
+        self.write(f"Score: {self.score}", align="center", font=FONT)
 
-    # def update_score(self):
-    #
+    def update_score(self):
+        self.clear()
+        self.penup()
+        self.color("black")
+        self.goto(-100, 180)
+        self.score +=1
+        self.write(f"Score: {self.score}", align="center", font=FONT)
