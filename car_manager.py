@@ -11,11 +11,10 @@ class CarManager(Turtle):
     def __init__(self):
         super().__init__()
         self.penup()
+        self.hideturtle()
+        self.shape("square")
         self.setheading(90)
         self.goto(270, 0)
-
-        self.shape("square")
-
 
         self.color(random.choice(COLORS))
         self.shapesize(stretch_wid=2, stretch_len=1, outline=1)
@@ -25,10 +24,7 @@ class CarManager(Turtle):
     def create_new_car(self):
         RANDOM_POSITION = random.randint(0, 280)
         self.setposition(270, RANDOM_POSITION)
-        # for i in range(5):
-        #     RANDOM_POSITION = random.randint(0, 280)
-        #     self.setposition(270, RANDOM_POSITION)
-        #     print(RANDOM_POSITION)
+        self.showturtle()
 
-    # def car_move(self):
-
+    def car_move(self):
+        self.forward(STARTING_MOVE_DISTANCE)
