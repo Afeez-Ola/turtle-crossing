@@ -17,6 +17,7 @@ class CarManager:
         if num_of_cars == 1:
             car = Turtle("square")
             car.penup()
+            car.shapesize(stretch_wid=1, stretch_len=2, outline=1)
             car.color(random.choice(COLORS))
             RANDOM_POSITION = random.randint(-250, 280)
             car.goto(300, RANDOM_POSITION)
