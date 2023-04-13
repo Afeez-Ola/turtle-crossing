@@ -11,10 +11,11 @@ class CarManager:
     def __init__(self):
         self.all_cars = []
         self.car_speed = MOVE_DISTANCE
+        self.key = 6
 
     def create_new_car(self):
-        num_of_cars = random.randint(1, 6)
-        if num_of_cars == 1:
+        num_of_cars = random.randint(3, self.key)
+        if num_of_cars == 3:
             car = Turtle("square")
             car.penup()
             car.shapesize(stretch_wid=1, stretch_len=2, outline=1)
@@ -29,3 +30,4 @@ class CarManager:
 
     def level_up(self):
         self.car_speed += MOVE_INCREMENT
+        self.key += -1
