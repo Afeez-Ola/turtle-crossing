@@ -11,11 +11,11 @@ class CarManager():
 
         self.all_cars = []
 
-    def create_new_car(self, car_position):
+    def create_new_car(self, ):
         num_of_cars = random.randint(1, 6)
         if num_of_cars == 1:
             car = Turtle("square")
-            car_position = car.position()
+
             car.penup()
             car.hideturtle()
             car.setheading(180)
@@ -25,8 +25,8 @@ class CarManager():
             RANDOM_POSITION = random.randint(-280, 280)
             car.setposition(300, RANDOM_POSITION)
             car.showturtle()
-            car.position()
             self.all_cars.append(car)
+            return car
 
     def car_move(self):
         for car in self.all_cars:
