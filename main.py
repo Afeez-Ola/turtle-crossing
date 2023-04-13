@@ -6,6 +6,7 @@ from scoreboard import Scoreboard
 
 player = Player()
 car_manager = CarManager()
+scoreboard = Scoreboard()
 
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -21,6 +22,11 @@ while game_is_on:
     screen.update()
     car_manager.create_new_car()
     car_manager.car_move()
+
+    print(player.distance(car_manager.all_cars))
+
+
+
 
 
 screen.exitonclick()
