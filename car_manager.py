@@ -21,7 +21,7 @@ class CarManager():
             car.color(random.choice(COLORS))
             car.shapesize(stretch_wid=1, stretch_len=2, outline=1)
             RANDOM_POSITION = random.randint(-280, 280)
-            car.goto(270, RANDOM_POSITION)
+            car.goto(300, RANDOM_POSITION)
             car.showturtle()
             self.all_cars.append(car)
 

@@ -13,8 +13,6 @@ screen.tracer(0)
 screen.onkey(player.up, "Up")
 screen.listen()
 
-# car_manager.create_new_car()
-car_manager.create_new_car()
 
 
 game_is_on = True
