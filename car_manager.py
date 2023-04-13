@@ -4,7 +4,7 @@ from turtle import Turtle
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 
 
-class CarManager():
+class CarManager:
     def __init__(self):
 
         self.all_cars = []
